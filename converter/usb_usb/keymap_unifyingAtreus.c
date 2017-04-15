@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     K06,K08,K31,K28,K0C,        K07,K1E,K35,K21,K29, \
     K05,K5B,K5E,K0F,K13,        K14,K2F,K17,K41,K3D, \
     K11,K53,K61,K33,K1C,        K39,K45,K1B,K42,K3E, \
-    K2C,K57,K2A,K60,K23,K1D,K44,K3A,K3B,K1A,K2B,K3F, \
+    K2C,K57,K2A,K60,K23,K1D,K44,K3A,K3B,K1A,K2B,K3F  \
 ) KEYMAP_ALL( \
             NO, NO, NO, NO, NO, NO, NO, NO, NO, NO, NO, NO,                                               \
     K29,    K3A,K3B,NO, K3D,K3E,K3F,NO, K41,K42,NO, K44,K45,      NO, NO, NO,   NO, NO, NO, NO,  NO,      \
@@ -100,32 +100,6 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         A,   S,   D,   F,   G,             H,   J,   K,   L,   BSPC, \
         Z,   X,   C,   V,   B,             N,   M,   COMM,DOT, SLSH, \
         TAB, LCTL,LALT,MHEN,FN0, SPC, SPC, LEFT,UP,  DOWN,RGHT,ENT ),
-        
-        
-        
-    /* 6: Poker Fn
-     * ,-----------------------------------------------------------.
-     * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|       |
-     * |-----------------------------------------------------------|
-     * |     |FnQ| Up|   |   |   |   |   |   |Cal|   |Hom|Ins|FnL  |
-     * |-----------------------------------------------------------|
-     * |      |Lef|Dow|Rig|   |   |Psc|Slk|Pau|   |Tsk|End|        |
-     * |-----------------------------------------------------------|
-     * |        |Del|   |Web|Mut|VoU|VoD|   |PgU|PgD|Del|          |
-     * |-----------------------------------------------------------|
-     * |    |    |    |         FnS            |    |    |    |    |
-     * `-----------------------------------------------------------'
-     * Fn:  to Fn overlay
-     * FnL: to Layout selector overaly
-     * FnQ: toggle Esc overlay
-     * FnS: toggle Arrow overlay
-     */
-    KEYMAP_ANSI(
-        ESC, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, TRNS, \
-        TRNS,FN2, UP,  TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,CALC,TRNS,HOME,INS, FN4,  \
-        TRNS,LEFT,DOWN,RGHT,TRNS,TRNS,PSCR,SLCK,PAUS,TRNS,FN3, END,      TRNS, \
-        TRNS,DEL, TRNS,WHOM,MUTE,VOLU,VOLD,TRNS,PGUP,PGDN,DEL,           TRNS, \
-        TRNS,TRNS,TRNS,          FN1,                     TRNS,TRNS,TRNS,TRNS),
         
 };
 
