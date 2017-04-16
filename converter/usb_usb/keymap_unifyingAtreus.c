@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "keymap_common.h"
 
 /*
- *  the unifying matrix for Atreus:
+ *  the unifying(K230) matrix for Atreus:
  *
  *  pin         23      22      21      8       7       9       2       6       5        4        3       1
  *          ,-------------------------------------------------------------------------------------------------.
@@ -56,50 +56,50 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *  |-----------------------------------------------------------|
      *  | Z  | X  | C  | V  | B  |    |    | N  | M  | ,  | .  | /  |
      *  |-----------------------------------------------------------|
-     *  |TAB |CTL |ALT |SFT |FN0 |SPC |SPC |FN1 | \  | ;  | '  |ENT |
+     *  |LCTL|TAB |ALT | -  |FN0 |SPC |ENT |FN1 |RSFT| '  | ;  | =  |
      *  `-----------------------------------------------------------'
      */
     KEYMAP_ATREUS(
         Q,   W,   E,   R,   T,             Y,   U,   I,   O,   P,    \
         A,   S,   D,   F,   G,             H,   J,   K,   L,   BSPC, \
         Z,   X,   C,   V,   B,             N,   M,   COMM,DOT, SLSH, \
-        TAB, LCTL,LALT,LSFT,FN0, SPC, SPC, FN1, BSLS,SCLN,QUOT,ENT  ),
+        LCTL,TAB, LALT,MINS,FN0, SPC, ENT, FN1, RSFT,QUOT,SCLN,EQL ),
         
     /* 
      *  1: fn0
      *  ,-----------------------------------------------------------.
      *  | 1  | 2  | 3  | 4  | 5  |    |    | 6  | 7  | 8  | 9  | 0  |
      *  |-----------------------------------------------------------|
-     *  |INS |HOME|PGUP| D  | F  |    |    | H  | `  | [  | ]  |BSPC|
+     *  |INS |HOME|PGUP|    |    |    |    |    | `  | [  | ]  |    |
      *  |-----------------------------------------------------------|
-     *  |DEL |END |PGDN| V  | B  |    |    | N  | M  | ,  | .  | /  |
+     *  |DEL |END |PGDN|    |    |    |    |    |    |    |    |    |
      *  |-----------------------------------------------------------|
-     *  |ESC |CTL |ALT |SFT |FN0 |SPC |SPC |LEFT| UP |DOWN|RGHT|ENT |
+     *  |    |    |    |    |    |    |    |LEFT| UP |DOWN|RGHT|    |
      *  `-----------------------------------------------------------'
      */
     KEYMAP_ATREUS(
         1,   2,   3,   4,   5,             6,   7,   8,   9,   0,    \
-        INS, HOME,PGUP,F,   G,             H,   GRV, LBRC,RBRC,BSPC, \
-        DEL, END, PGDN,V,   B,             N,   M,   COMM,DOT, SLSH, \
-        ESC, LCTL,LALT,LSFT,FN0, SPC, SPC, LEFT,UP,  DOWN,RGHT,ENT  ),
+        INS, HOME,PGUP,TRNS,TRNS,          TRNS,GRV, LBRC,RBRC,BSPC, \
+        DEL, END, PGDN,TRNS,TRNS,          TRNS,TRNS,TRNS,TRNS,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,UP,  DOWN,RGHT,TRNS),
         
     /* 
-     *  1: fn1
+     *  2: fn1
      *  ,-----------------------------------------------------------.
      *  | F1 | F2 | F3 | F4 | F5 |    |    | F6 | F7 | F8 | F9 |F11 |
      *  |-----------------------------------------------------------|
-     *  | A  | S  | D  | D  | F  |    |    | H  | J  | K  | L  |BSPC|
+     *  |    |    |    |    |    |    |    |    |    |    |    |    |
      *  |-----------------------------------------------------------|
-     *  | Z  | X  | C  | V  | B  |    |    | N  | M  | ,  | .  | /  |
+     *  |    |    |    |    |    |    |    |    |    |    |    |    |
      *  |-----------------------------------------------------------|
-     *  |TAB |CTL |ALT |SFT |FN0 |SPC |SPC |LEFT| UP |DOWN|RGHT|ENT |
+     *  |ESC |    |    |    |    |    |    |    |    |    |    |    |
      *  `-----------------------------------------------------------'
      */
     KEYMAP_ATREUS(
-        Q,   W,   E,   R,   T,             Y,   U,   I,   O,   P,    \
-        A,   S,   D,   F,   G,             H,   J,   K,   L,   BSPC, \
-        Z,   X,   C,   V,   B,             N,   M,   COMM,DOT, SLSH, \
-        TAB, LCTL,LALT,MHEN,FN0, SPC, SPC, LEFT,UP,  DOWN,RGHT,ENT ),
+        F1,  F2,  F3,  F4,  F5,            F6,  F7,  F8,  F9,  F11,  \
+        TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS,TRNS,TRNS,TRNS,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS,TRNS,TRNS,TRNS,TRNS, \
+        ESC ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS),
         
 };
 
