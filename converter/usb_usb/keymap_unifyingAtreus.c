@@ -56,32 +56,32 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *  |-----------------------------------------------------------|
      *  | Z  | X  | C  | V  | B  |    |    | N  | M  | ,  | .  | /  |
      *  |-----------------------------------------------------------|
-     *  |LCTL|TAB |ALT | -  |FN0 |SPC |ENT |FN1 |RSFT| '  | ;  | =  |
+     *  |LCTL|FN2 |ALT | -  |FN0 |FN3 |ENT |FN1 | =  | '  | ;  |RSFT|
      *  `-----------------------------------------------------------'
      */
     KEYMAP_ATREUS(
         Q,   W,   E,   R,   T,             Y,   U,   I,   O,   P,    \
         A,   S,   D,   F,   G,             H,   J,   K,   L,   BSPC, \
         Z,   X,   C,   V,   B,             N,   M,   COMM,DOT, SLSH, \
-        LCTL,TAB, LALT,MINS,FN0, SPC, ENT, FN1, RSFT,QUOT,SCLN,EQL ),
+        LCTL,FN2, LALT,MINS,FN0, FN3, ENT, FN1, EQL, QUOT,SCLN,RSFT),
         
     /* 
      *  1: fn0
      *  ,-----------------------------------------------------------.
      *  | 1  | 2  | 3  | 4  | 5  |    |    | 6  | 7  | 8  | 9  | 0  |
      *  |-----------------------------------------------------------|
-     *  |INS |HOME|PGUP|    |    |    |    |    | `  | [  | ]  |    |
+     *  |INS |HOME|PGUP|    |    |    |    |    | `  | [  | ]  |DEL |
      *  |-----------------------------------------------------------|
      *  |DEL |END |PGDN|    |    |    |    |    |    |    |    |    |
      *  |-----------------------------------------------------------|
-     *  |    |    |    |    |    |    |    |LEFT| UP |DOWN|RGHT|    |
+     *  |ESC |LGUI|    |    |    |    |    |LEFT| UP |DOWN|RGHT|    |
      *  `-----------------------------------------------------------'
      */
     KEYMAP_ATREUS(
         1,   2,   3,   4,   5,             6,   7,   8,   9,   0,    \
         INS, HOME,PGUP,TRNS,TRNS,          TRNS,GRV, LBRC,RBRC,BSPC, \
-        DEL, END, PGDN,TRNS,TRNS,          TRNS,TRNS,TRNS,TRNS,TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,UP,  DOWN,RGHT,TRNS),
+        DEL, END, PGDN,TRNS,TRNS,          TRNS,TRNS,TRNS,TRNS,DEL , \
+        ESC ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,UP,  DOWN,RGHT,TRNS),
         
     /* 
      *  2: fn1
@@ -92,14 +92,14 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *  |-----------------------------------------------------------|
      *  |    |    |    |    |    |    |    |    |    |    |    |    |
      *  |-----------------------------------------------------------|
-     *  |ESC |    |    |    |    |    |    |    |    |    |    |    |
+     *  |    |    |    |    |    |    |    |    |    |    |    |    |
      *  `-----------------------------------------------------------'
      */
     KEYMAP_ATREUS(
         F1,  F2,  F3,  F4,  F5,            F6,  F7,  F8,  F9,  F11,  \
         TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS,TRNS,TRNS,TRNS,TRNS, \
-        ESC ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS),
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS),
         
 };
 
@@ -107,5 +107,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const action_t PROGMEM fn_actions[] = {
     [0] = ACTION_LAYER_MOMENTARY(1),
     [1] = ACTION_LAYER_MOMENTARY(2),
+    [2] = ACTION_MODS_TAP_KEY(MOD_LGUI, KC_TAB),
+    [3] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_SPC)
 };
 
