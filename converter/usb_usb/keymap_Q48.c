@@ -40,23 +40,23 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
                                                 FN1, ESC, BSPC,TAB, FN0,           LBRC, \
         RBRC,          SCLN,QUOT,     COMM,DOT,                                          \
                                                           HOME,     INS, END,      RGHT, \
-        LEFT,DOWN,UP,                                                                  \
+        LEFT,DOWN,UP,                                                                    \
         LCTL,LSFT,LALT,LGUI),
     [1] = KEYMAP_TKG(
                             TRNS,TRNS,CALC,TRNS,3,   TRNS,TRNS,TRNS,8,   TRNS,TRNS,TRNS, \
         TRNS,TRNS,9,   0,   1,   4,   TRNS,5,   7,   TRNS,2,   TRNS,6,   TRNS,           \
                                                 TRNS,TRNS,DEL, GRV, TRNS,          MINS, \
-        EQL,           TRNS,TRNS,     SLSH,BSLS,                                         \
-                                                          VOLU,     MUTE,VOLD,     END,  \
+        EQL,           TRNS,BSLS,     TRNS,SLSH,                                         \
+                                                          TRNS,     TRNS,TRNS,     END,  \
         HOME,PGDN,PGUP,                                                                  \
         CAPS,TRNS,TRNS,TRNS),
     [2] = KEYMAP_TKG(
-                            TRNS,TRNS,TRNS,TRNS,F3,  TRNS,TRNS,TRNS,F10, TRNS,TRNS,TRNS, \
-        TRNS,TRNS,F11, F12, F1,  F4,  TRNS,F5,  F9,  TRNS,F2,  TRNS,F8,  TRNS,           \
-                                                TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
+                            TRNS,TRNS,TRNS,TRNS,F3,  TRNS,TRNS,TRNS,F8,  TRNS,TRNS,TRNS, \
+        TRNS,TRNS,F9,  F10, F1,  F4,  TRNS,F5,  F7,  TRNS,F2,  TRNS,F6,  TRNS,           \
+                                                TRNS,TRNS,F11, F12, TRNS,          TRNS, \
         TRNS,          TRNS,TRNS,     TRNS,TRNS,                                         \
-                                                          TRNS,     TRNS,TRNS,     TRNS, \
-        TRNS,TRNS,TRNS,                                                                  \
+                                                          TRNS,     MUTE,TRNS,     MNXT, \
+        MPRV,VOLD,VOLU,                                                                  \
         TRNS,TRNS,TRNS,TRNS),
 };
 
